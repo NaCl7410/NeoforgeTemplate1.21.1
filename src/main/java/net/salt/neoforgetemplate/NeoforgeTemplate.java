@@ -1,5 +1,7 @@
 package net.salt.neoforgetemplate;
 
+import net.minecraft.world.item.CreativeModeTabs;
+import net.salt.neoforgetemplate.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -28,6 +30,8 @@ public class NeoforgeTemplate {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public NeoforgeTemplate(IEventBus modEventBus, ModContainer modContainer) {
@@ -38,6 +42,9 @@ public class NeoforgeTemplate {
         // Note that this is necessary if and only if we want *this* class (NeoforgeTemplate) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,11 +58,13 @@ public class NeoforgeTemplate {
         LOGGER.info("HELLO FROM COMMON SETUP");
     }
 
-    // Add the example block item to the building blocks tab
+
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        //if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-        //    event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.DEBUG_WAND);
+        }
     }
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
