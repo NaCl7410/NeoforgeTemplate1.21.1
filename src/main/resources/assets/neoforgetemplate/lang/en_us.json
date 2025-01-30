@@ -1,3 +1,5 @@
 {
-  "item.neoforgetemplate.debugwand": "Debug Wand"
+  "item.neoforgetemplate.debug_wand": "Debug Wand",
+
+  "block.neoforgetemplate.debug_block": "Debug Block"
 }

@@ -1,6 +1,7 @@
 package net.salt.neoforgetemplate;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.salt.neoforgetemplate.block.ModBlocks;
 import net.salt.neoforgetemplate.item.ModItems;
 import org.slf4j.Logger;
 
@@ -44,6 +45,7 @@ public class NeoforgeTemplate {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -62,6 +64,9 @@ public class NeoforgeTemplate {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.DEBUG_WAND);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.DEBUG_BLOCK);
         }
     }
 

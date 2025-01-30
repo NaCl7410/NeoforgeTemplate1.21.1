@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "": {
+      "model": "neoforgetemplate:block/debug_block"
+    }
+  }
+}

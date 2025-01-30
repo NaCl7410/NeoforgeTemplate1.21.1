@@ -9,7 +9,14 @@ import net.salt.neoforgetemplate.NeoforgeTemplate;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(NeoforgeTemplate.MODID);
 
-    public static final DeferredItem<Item> DEBUG_WAND = ITEMS.register("debugwand",
+    /*
+    associated files include:
+    models/item/.json
+    textures/item/.png
+    lang/en_us.json entry
+    */
+
+    public static final DeferredItem<Item> DEBUG_WAND = ITEMS.register("debug_wand",
             () -> new Item(new Item.Properties()));
 
 
