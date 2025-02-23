@@ -1,5 +1,10 @@
 {
   "item.neoforgetemplate.debug_wand": "Debug Wand",
+  "item.neoforgetemplate.example_item": "Example Item",
 
-  "block.neoforgetemplate.debug_block": "Debug Block"
+  "block.neoforgetemplate.debug_block": "Debug Block",
+  "block.neoforgetemplate.example_ore": "Example Ore",
+
+  "creativetab.neoforgetemplate.creative_tab_name_1": "Creative Mode Tab 1",
+  "creativetab.neoforgetemplate.creative_tab_name_2": "Creative Mode Tab 2"
 }

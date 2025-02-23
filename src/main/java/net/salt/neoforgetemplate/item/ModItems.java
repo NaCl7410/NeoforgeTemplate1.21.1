@@ -16,8 +16,11 @@ public class ModItems {
     lang/en_us.json entry
     */
 
-    public static final DeferredItem<Item> DEBUG_WAND = ITEMS.register("debug_wand",
+    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.register("example_item",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> DEBUG_WAND = ITEMS.register("debug_wand",
+            () -> new DebugWandItem(new Item.Properties()));
 
 
 

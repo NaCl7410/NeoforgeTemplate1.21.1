@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E" : {
+      "item": "neoforgetemplate:example_item"
+    },
+    "#" : {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " E ",
+    "E#E",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "neoforgetemplate:debug_block"
+  }
+}
