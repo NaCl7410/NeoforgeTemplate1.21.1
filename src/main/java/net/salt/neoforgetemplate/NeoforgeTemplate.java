@@ -27,7 +27,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(NeoforgeTemplate.MODID)
 public class NeoforgeTemplate {
     // Define mod id in a common place for everything to reference
-    // This should match an entry in the gradle.properites file
+    // This should match an entry in the gradle.properties file
     public static final String MODID = "neoforgetemplate";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -37,6 +37,11 @@ public class NeoforgeTemplate {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public NeoforgeTemplate(IEventBus modEventBus, ModContainer modContainer) {
+
+        for(int j = 0; j<1000; j++) {
+            System.out.println("SALT: WRONG PROJECT");
+        }
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
