@@ -38,10 +38,6 @@ public class NeoforgeTemplate {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public NeoforgeTemplate(IEventBus modEventBus, ModContainer modContainer) {
 
-        for(int j = 0; j<1000; j++) {
-            System.out.println("SALT: WRONG PROJECT");
-        }
-
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
